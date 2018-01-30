@@ -1,0 +1,23 @@
+{% extends 'askstories/wrap.html' %}
+
+{% block content %}
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#collapseOne" href="#collapse1">
+                        Newstories
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                {% for item in items %}
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="{{ item.url }}" target="_blank"> {{ item.title }} </a></li>
+                    </ul>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
