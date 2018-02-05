@@ -1,0 +1,26 @@
+<h1>{{ photo_name.title }}</h1>
+
+{% if error_message %} <p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'gallery:add_like' photo_name.id %}" method="post">
+    {% csrf_token %}
+    {% for like in photo.like_set.all %}
+        <input type="radio" name="add_like" id="like{{ forloop.counter }}" value="{{ like.id }}"/>
+        <label for="like{{ forloop.counter }}">{{ like.likes }}</label><br/>
+    {% endfor %}
+    <input type="submit" value="Like"/>
+</form>
+
+<h1>{{ question.question_text }}</h1>
+
+
+
+
+
+<!--<ul>-->
+<!--{% for like in photo.like_set.all %}-->
+    <!--<li>{{ like.likes }}</li>-->
+    <!--<img src="{{ photo.url }}" alt="{{ photo.title }}">-->
+
+<!--{% endfor %}-->
+<!--</ul>-->
