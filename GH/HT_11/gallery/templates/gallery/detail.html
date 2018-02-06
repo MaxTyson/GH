@@ -1,26 +1,19 @@
-<h1>{{ photo_name.title }}</h1>
+<center><h1>{{ photo.title }}</h1></center>
+<figure>
+    <img src="{{ photo.url }}" alt="{{ photo.title }}" width="300px"><br>
+    <figcaption>
+        <p>Published <time>{{ photo.pub_date }}</time></p>
+    </figcaption>
+</figure>
 
-{% if error_message %} <p><strong>{{ error_message }}</strong></p>{% endif %}
-
-<form action="{% url 'gallery:add_like' photo_name.id %}" method="post">
+<form action="{% url 'gallery:add_like' photo.id %}" method="post">
     {% csrf_token %}
     {% for like in photo.like_set.all %}
-        <input type="radio" name="add_like" id="like{{ forloop.counter }}" value="{{ like.id }}"/>
-        <label for="like{{ forloop.counter }}">{{ like.likes }}</label><br/>
+        <input type="radio" name="like" id="like{{ forloop.counter }}" value="{{ like.id }}"/>
+        <label for="like{{ forloop.counter }}">{{ like.likes }}</label><br />
     {% endfor %}
     <input type="submit" value="Like"/>
 </form>
+{% if error_message %} <p style="color: red"><strong>{{ error_message }}</strong></p>{% endif %}
+{{ like.likes }}
 
-<h1>{{ question.question_text }}</h1>
-
-
-
-
-
-<!--<ul>-->
-<!--{% for like in photo.like_set.all %}-->
-    <!--<li>{{ like.likes }}</li>-->
-    <!--<img src="{{ photo.url }}" alt="{{ photo.title }}">-->
-
-<!--{% endfor %}-->
-<!--</ul>-->

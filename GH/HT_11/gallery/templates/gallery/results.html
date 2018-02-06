@@ -3,10 +3,10 @@
 <ul>
     {% for like in photo.like_set.all %}
         <li>
-            {{ like.photo_name }} gallery{{ like.likes|pluralize }}
-            <!--<li>{{ choice.choice_text }} &#45;&#45; {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>-->
+            {{ like.photo }} gallery{{ some_like.likes|pluralize }}
         </li>
     {% endfor %}
 </ul>
 
 <!--<a href="{% url'gallery:detail' photo.id %}"> Add like again? </a>-->
+

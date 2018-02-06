@@ -5,15 +5,22 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Simple photo gallery</title>
 </head>
 <body>
+<header>
+    <center><h1>Welcome to simple photo gallery</h1></center>
+</header>
 
 {% if latest_photos_list %}
 
     <ul>
-    {% for photo in latest_photos_list %}
-        <li><a href="{% url 'gallery:detail' photo.id %}">{{ photo.title }}</a></li>
+    {% for some_photo in latest_photos_list %}
+        <li><a href="/gallery/{{ some_photo.id }}">
+            <img src="{{ some_photo.url }}" alt="{{ some_photo.title }}" width="50px">
+            {{ some_photo.title }}</a>
+        </li>
+        <br>
     {% endfor %}
     </ul>
 {% else %}
