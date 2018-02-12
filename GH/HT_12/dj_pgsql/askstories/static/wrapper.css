@@ -1,0 +1,142 @@
+:root{
+	--logo-first-color: #555555;      /* grey */
+	--logo-second-color: #4CAF50;     /* green */
+	--navbar-first-color: #5F5F5F;    /* grey */
+	--navbar-second-color: #000000;   /* black */
+	--navbar-text-color: #ffffff;     /* white */
+	--bg-main-color: #F1F1F1;
+	--m-menu-bg-text-color: #CCCCCC;  /* grey */
+}
+
+*{
+	font-family: Verdana, sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+body{
+	margin: 0;
+}
+
+header{
+	margin: 10px;
+	width: 100%;
+}
+
+.main-logo{
+	float: left;
+	width: 50%;
+}
+
+.logo-left-size, .logo-right-size{
+	font-family: fontawesome;
+	font-size: 36px;
+	font-weight: bold;
+	text-decoration: none;
+	letter-spacing: 3px;
+	color: var(--logo-first-color);
+	top: 17px;
+
+}
+
+.logo-right-size{
+	color: var(--logo-second-color);
+}
+
+.logo-left-size:hover {
+	text-decoration: none;
+	color: var(--logo-second-color);
+}
+
+.head-subtitle{
+	float: right;
+	font-family: Segoe UI, Arial, sans-serif;
+	letter-spacing: 4px;
+	font-size: 15px;
+	width: 50%;
+	padding: 20px 20px 0 0;
+	text-align: right;
+	text-transform: uppercase;
+}
+
+nav{
+	clear: left;
+    width: 100vw;
+    background-color: var(--navbar-first-color);
+    box-shadow: 0 1px 10px var(--navbar-first-color);
+}
+
+.navbar li{
+	float: left;
+    display: inline;
+    text-transform: uppercase;
+    line-height: 3.2em;
+}
+
+.navbar a{
+    color: var(--navbar-text-color);
+	letter-spacing: 1px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    margin: 0 15px 0 15px;
+}
+
+.navbar a:hover{
+	text-decoration: none
+}
+
+.navbar li:hover{
+	background-color: var(--navbar-second-color);
+}
+
+menu{
+    background-color: var(--bg-main-color);
+    float: left;
+    width: 12%;
+    min-height: 100vh;
+    margin-top: -50px;
+    padding: 50px 0 0 0;
+}
+.main-menu{
+	color: var(--navbar-second-color);
+
+}
+
+.main-menu li{
+	font-family: "Segoe UI", Arial, sans-serif;
+	font-size: 15px;
+    line-height: 1.5;
+	padding: 2px 1px 1px 16px;
+	list-style-type: none; 
+	color: var(--navbar-second-color);
+}
+
+.main-menu a:hover{
+	text-decoration: none;
+	color: var(--navbar-second-color);
+
+}
+
+.main-menu li:hover{
+	background-color: var(--m-menu-bg-text-color);
+}
+
+.content{
+	display: table;
+}
+
+article{
+	width: 75%;
+	margin: 15px;
+	float: left;
+	text-align: justify;
+}
+
+footer{
+    width: 100%;
+    padding: 10px;
+    float: left;
+    left: 0; 
+    bottom: 0;
+	text-align: center;
+}

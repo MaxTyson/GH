@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <title>my_Twelfth_hw.com</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'wrapper.css' %}">
+    <style>
+.sticky {
+  position: fixed;
+  top: 0px;  /* если ноль заменить на число (и в скрипте тоже), то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом. Применим, например, при фиксированном сверху меню */
+  z-index: 101;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <section class="main-logo">
+        <a class="logo-left-size" href="#">my_Twelfth_hw<span class="logo-right-size">.com</span></a>
+    </section>
+    <section class="head-subtitle">
+        <p>The Django-project to home task #12</p>
+    </section>
+</header>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="/askstories/"><span class="glyphicon glyphicon-home"></span> </a></li>
+        <li><a href="#">Python</a></li>
+        <li><a href="#">Django</a></li>
+        <li><a href="#">Contacts</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
+
+<menu class="main-menu">
+    <ul>
+        <li><a href="/askstories/">Askstories</a></li>
+        <li><a href="/showstories/">Showstories</a></li>
+        <li><a href="/newstories/">Newstories</a></li>
+        <li><a href="/jobstories/">Jobstories</a></li>
+    </ul>
+</menu>
+
+<div class="content">
+    <article>
+        {% block content %}
+        {% endblock content%}
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iusto laudantium rerum temporibus, tenetur vel voluptate. Ab asperiores ipsum labore odit similique. Aperiam beatae facilis illo nihil quibusdam temporibus voluptatibus.</span><span>A cum dicta doloribus error labore magnam nostrum officiis omnis, quae reprehenderit? A ab ad dignissimos eius hic illo iste labore libero magnam maiores nemo nulla possimus rem, repellat sit.</span><span>Nisi, non tempora! Aperiam eligendi error et hic ipsam molestiae non nulla, praesentium quaerat ut voluptas voluptatem. Accusantium aliquam dolor iste nesciunt repellat veniam vitae. Dolorum incidunt nesciunt praesentium sunt?</span><span>Autem corporis eos fugiat, illo illum magnam natus optio perferendis porro quasi quidem quos temporibus, voluptas! Ad blanditiis maiores maxime odio quas reprehenderit repudiandae temporibus! Ipsam sint tempora vero voluptatum!</span><span>Alias asperiores at delectus earum error impedit nemo odio officiis, optio perspiciatis quia quo recusandae rerum similique sunt unde veniam! Culpa cumque facilis inventore nemo porro quos tempore vitae voluptatum.</span><span>Ad atque commodi dicta dolore dolorum fuga, id labore minus nemo officia, perspiciatis soluta. Earum fugiat non numquam perspiciatis, quaerat qui reprehenderit sunt? Architecto doloribus facere facilis id nostrum quasi.</span><span>Aspernatur blanditiis commodi corporis dolore dolorem doloremque eaque eos ex excepturi exercitationem, harum id, magnam maxime minima nam neque nihil numquam, placeat praesentium quos saepe soluta tenetur veritatis vero voluptates!</span><span>Alias doloremque eius exercitationem harum illo in perspiciatis quae rem saepe soluta. A animi aperiam culpa eligendi molestias nostrum, odio quod tenetur ullam veniam! Ab consequatur corporis laudantium natus quibusdam!</span><span>Accusantium blanditiis commodi dolorem eius fuga libero maxime nam neque, nostrum officiis qui quo ratione, sequi. Cum distinctio eveniet, excepturi expedita harum laboriosam magnam porro quaerat quo rem reprehenderit similique?</span><span>Aliquam beatae blanditiis consequuntur corporis, distinctio dolor dolorem enim error, et eum expedita facilis fugiat illo magnam molestias natus nemo, omnis quia quibusdam quis quisquam quod reprehenderit soluta tenetur totam?</span><span>Aut culpa deserunt enim fugiat id incidunt ipsa molestias, nihil perferendis ratione sed totam unde vero! Aliquid architecto eaque quam ratione suscipit! Consequatur, odio praesentium quia soluta tempora voluptas voluptates?</span><span>A aliquam atque commodi deleniti dolore expedita iste minima mollitia, nobis perspiciatis, placeat qui quibusdam quis repellat sequi sit tempore veritatis? A consequuntur cupiditate dignissimos eius esse eveniet quaerat sed?</span><span>Accusamus ad animi asperiores deserunt dignissimos dolorum, ducimus eos error est in inventore, ipsum itaque labore minima molestias neque nobis non officia quae quas reiciendis repellendus suscipit temporibus veniam voluptatem.</span><span>A blanditiis consequatur, dolorem dolores molestiae nostrum quas quibusdam sunt? Aliquid aperiam blanditiis ea eos in incidunt officia rerum sit. Animi dicta dolorum ea, iusto necessitatibus quidem quod rem ullam?</span><span>Ad ipsa ipsam quos reiciendis. Eius hic id omnis repellendus voluptatum. Aliquid animi doloremque eveniet incidunt ipsam ipsum iusto laudantium libero nemo nesciunt omnis qui quibusdam recusandae repudiandae, soluta, veritatis!</span><span>Ab, corporis distinctio dolorem doloremque ea facere iure minima pariatur quas, qui quisquam ratione similique soluta tempore veniam? Atque excepturi explicabo nihil nisi provident quas quis quod quos rerum tempore.</span><span>Accusamus commodi cum delectus dignissimos ex incidunt inventore libero molestiae, necessitatibus nemo possimus, provident, quidem ratione rem reprehenderit rerum voluptate voluptatem. Animi ea est mollitia perspiciatis qui repellat similique totam.</span><span>A, aliquam commodi consectetur, consequatur distinctio dolor dolorum enim illum iure labore nisi numquam odit officiis placeat porro quaerat quasi quibusdam quo rem vitae? Consequatur fugiat minus neque officiis saepe.</span><span>Adipisci architecto, dicta dolor dolorum ducimus explicabo fugiat inventore ipsum laborum magni maxime nemo nobis obcaecati odit officia quam quasi quia ratione, reprehenderit similique suscipit veniam vitae voluptates voluptatibus voluptatum.</span><span>At illum pariatur suscipit? Ab, alias architecto beatae commodi cupiditate distinctio dolorem dolores earum eligendi, error minima, modi molestias mollitia nam odio omnis quas quasi quidem rerum similique! Animi, perspiciatis.</span></p>
+    </article>
+
+    <aside class="sidebar">
+
+    </aside>
+
+    <footer>
+        <hr>
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur at blanditiis deleniti, dolorem ducimus eos eum ex explicabo facilis iusto libero magnam maxime molestias natus quidem quis, similique? Esse.</span><span>Aspernatur atque consectetur dicta eaque, enim, fugit iste nobis nostrum qui saepe, sed tenetur voluptas voluptatem? Aliquid atque culpa cum earum explicabo minus nemo, placeat provident quam ut voluptatem voluptatibus!</span></p>
+        <p>&copy; MaxTyson <time>2018</time></p>
+    </footer>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
