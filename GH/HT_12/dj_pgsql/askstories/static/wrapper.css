@@ -99,6 +99,7 @@ menu{
 }
 .main-menu{
 	color: var(--navbar-second-color);
+	text-transform: capitalize;
 
 }
 
@@ -107,8 +108,9 @@ menu{
 	font-size: 15px;
     line-height: 1.5;
 	padding: 2px 1px 1px 16px;
-	list-style-type: none; 
+	list-style-type: none;
 	color: var(--navbar-second-color);
+
 }
 
 .main-menu a:hover{
@@ -119,6 +121,11 @@ menu{
 
 .main-menu li:hover{
 	background-color: var(--m-menu-bg-text-color);
+}
+
+.category-list{
+	text-transform: capitalize;
+
 }
 
 .content{
@@ -136,7 +143,7 @@ footer{
     width: 100%;
     padding: 10px;
     float: left;
-    left: 0; 
+    left: 0;
     bottom: 0;
 	text-align: center;
 }

@@ -9,13 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{% static 'wrapper.css' %}">
-    <style>
-.sticky {
-  position: fixed;
-  top: 0px;  /* если ноль заменить на число (и в скрипте тоже), то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом. Применим, например, при фиксированном сверху меню */
-  z-index: 101;
-}
-</style>
 
 </head>
 <body>
@@ -31,7 +24,7 @@
 
 <nav class="navbar">
     <ul>
-        <li><a href="/askstories/"><span class="glyphicon glyphicon-home"></span> </a></li>
+        <li><a href="/"><span class="glyphicon glyphicon-home"></span> </a></li>
         <li><a href="#">Python</a></li>
         <li><a href="#">Django</a></li>
         <li><a href="#">Contacts</a></li>
@@ -40,11 +33,12 @@
 </nav>
 
 <menu class="main-menu">
+
     <ul>
-        <li><a href="/askstories/">Askstories</a></li>
-        <li><a href="/showstories/">Showstories</a></li>
-        <li><a href="/newstories/">Newstories</a></li>
-        <li><a href="/jobstories/">Jobstories</a></li>
+        {% for category in categories %}
+            <li><a class="category-list" href="/{{ category.name }}/">{{ category.name }}</a></li>
+        {% endfor %}
+        <li><a href="/"><span class="glyphicon glyphicon-hand-left" onclick="history.back();"></span></a></li>
     </ul>
 </menu>
 

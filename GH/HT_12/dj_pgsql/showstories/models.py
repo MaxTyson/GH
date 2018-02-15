@@ -1,8 +1,6 @@
 from django.db import models
-# .filter Showstories
-# from up1 item=item.obj.filter
 
-# Create your models here.
+
 class Cat(models.Model):
     name = models.CharField(max_length=20, null=False)
 
@@ -29,5 +27,6 @@ class Showstories(models.Model):
         return self.title
 
 
-
+        # .filter Showstories
+        # from up1 item=item.obj.filter
 # item = Category.object.all

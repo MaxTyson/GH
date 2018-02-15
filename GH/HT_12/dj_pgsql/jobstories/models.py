@@ -1,8 +1,8 @@
 from django.db import models
-
-# Create your models here.
+from showstories.models import Cat
 
 class Jobstories(models.Model):
+    category_fk = models.ForeignKey(Cat, on_delete=models.CASCADE)
     item_id = models.CharField(max_length=20)
     author = models.CharField(max_length=50, default=0)
     score= models.IntegerField(default=0)

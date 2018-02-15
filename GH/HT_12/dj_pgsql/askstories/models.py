@@ -1,7 +1,9 @@
 from django.db import models
+from showstories.models import Cat
 
 # Create your models here.
 class Askstories(models.Model):
+    category_fk = models.ForeignKey(Cat, on_delete=models.CASCADE)
 
     item_id = models.CharField(max_length=20)
     author = models.CharField(max_length=50, default=0)

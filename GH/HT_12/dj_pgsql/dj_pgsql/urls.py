@@ -22,6 +22,7 @@ import jobstories.views
 
 urlpatterns = [
     path('admin/',       admin.site.urls),
+    path('',             askstories.views.categories),
     path('askstories/',  askstories.views.askstories),
     path('showstories/', showstories.views.showstories),
     path('newstories/',  newstories.views.newstories),
